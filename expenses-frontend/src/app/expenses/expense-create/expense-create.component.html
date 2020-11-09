@@ -1,0 +1,56 @@
+<app-header></app-header>
+<main>
+
+  <mat-card>
+    <form #expenseForm="ngForm" (submit)="onAddExpense(expenseForm)">
+
+      <mat-form-field *ngIf="id > 0">
+        <mat-label>Id Expense</mat-label>
+        <input matInput #input class="form-control" placeholder="Id" [(ngModel)]="expense.id" name="id" disabled>
+      </mat-form-field>
+
+      <br />
+
+      <mat-form-field>
+        <mat-label>Person Name</mat-label>
+        <input matInput [(ngModel)]="expense.personName" type="text" name="personName" required>
+      </mat-form-field>
+
+      <br />
+
+      <mat-form-field>
+        <mat-label>Description</mat-label>
+        <textarea matInput rows="6" [(ngModel)]="expense.description" name="description" type="text"></textarea>
+      </mat-form-field>
+
+      <br />
+
+      <mat-form-field>
+        <mat-label>Date/Time</mat-label>
+        <input matInput [(ngModel)]="expense.dateTime" type="text" name="dateTime" placeholder="yyyy-mm-dd hh:mm:ss">
+      </mat-form-field>
+
+      <br />
+
+      <mat-form-field>
+        <mat-label>Value</mat-label>
+        <input matInput [(ngModel)]="expense.value" name="value" type="text" placeholder="0.00">
+      </mat-form-field>
+
+      <br />
+
+      <mat-form-field>
+        <mat-label>Tags (separeted by commas)</mat-label>
+        <input matInput type="text" name="tags" [(ngModel)]="expense.tags">
+      </mat-form-field>
+
+      <br />
+
+      <button mat-raised-button color="primary">Save</button>
+
+    </form>
+  </mat-card>
+
+  <p class="info-text mat-body-1" *ngIf="message != ''">{{ message}}</p>
+
+</main>
