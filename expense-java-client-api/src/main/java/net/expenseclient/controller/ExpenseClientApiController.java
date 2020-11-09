@@ -23,8 +23,7 @@ import io.swagger.annotations.ApiOperation;
 import net.expenseclient.model.dto.ExpenseDTO;
 
 @RestController
-
-@CrossOrigin(origins = { "http://localhost:4200" })
+@CrossOrigin(origins = { "*" })
 @RequestMapping("/v1/expenses")
 public class ExpenseClientApiController {
 

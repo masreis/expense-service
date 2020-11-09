@@ -5,4 +5,7 @@ RUN npm install
 COPY . .
 RUN npm run build --prod
 FROM nginx:1.15.8-alpine
-COPY --from=builder /usr/src/app/dist/expenses-frontend/ /usr/share/nginx/html
+RUN rm -rf /usr/share/nginx/html/*
+COPY nginx.conf /etc/nginx/conf.d/default.conf
+COPY --from=builder /usr/src/app/dist/expenses-frontend /usr/share/nginx/html
+EXPOSE 80
