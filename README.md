@@ -1,7 +1,6 @@
 #
 
-
-mvn clean compile package install
+## Build
 
 mvn package
 docker build -t exacta/config-server .
