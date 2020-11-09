@@ -2,8 +2,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app.routing';
-import { LOCALE_ID } from '@angular/core';
-
 
 import { FormsModule } from '@angular/forms';
 
@@ -14,7 +12,6 @@ import { MatCardModule } from '@angular/material/card';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatExpansionModule } from "@angular/material/expansion";
 import { MatIconModule } from "@angular/material/icon";
-import { NgxMatDatetimePickerModule, NgxMatNativeDateModule } from "@angular-material-components/datetime-picker";
 
 import { AppComponent } from './app.component';
 
@@ -43,8 +40,6 @@ import { HttpClientModule } from '@angular/common/http';
     MatExpansionModule,
     MatTableModule,
     MatIconModule,
-    NgxMatDatetimePickerModule,
-    NgxMatNativeDateModule,
     HttpClientModule
   ],
   providers: [ExpenseService],

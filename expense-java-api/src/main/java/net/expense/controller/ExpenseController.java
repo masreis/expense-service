@@ -24,9 +24,9 @@ import org.springframework.web.bind.annotation.RestController;
 import io.swagger.annotations.ApiOperation;
 import net.expense.model.Expense;
 import net.expense.model.Tag;
+import net.expense.model.dto.ExpenseDTO;
 import net.expense.service.ExpenseService;
 import net.expense.service.TagService;
-import net.expenseclient.model.dto.ExpenseDTO;
 
 @RestController
 @RequestMapping("/v1/expenses")

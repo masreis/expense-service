@@ -5,8 +5,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 
-import net.expenseclient.exception.ExpenseNotFoundException;
-import net.expenseclient.response.Response;
+import net.expense.response.Response;
 
 @ControllerAdvice
 public class ExpenseJavaApiExceptionHandler<T> {

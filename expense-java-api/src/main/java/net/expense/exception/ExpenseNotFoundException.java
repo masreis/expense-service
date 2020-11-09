@@ -1,4 +1,4 @@
-package net.expenseclient.exception;
+package net.expense.exception;
 
 public class ExpenseNotFoundException extends Exception {
 

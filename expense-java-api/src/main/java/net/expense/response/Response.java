@@ -1,4 +1,4 @@
-package net.expenseclient.response;
+package net.expense.response;
 
 import java.util.ArrayList;
 import java.util.List;
