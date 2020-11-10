@@ -1,10 +1,10 @@
-# Expense Service
+# Expense Service API
 
 ## Ports
 
 |Application|Port|
 |---|---|
-|Expense Service|8080,8081|
+|Expense Service API|8080|
 |Spring Cloud Config Server|8888|
 
 ## Swagger Docs
@@ -17,6 +17,7 @@ http://localhost:8080/swagger-ui/
 
 ## Expense JSON sample
 
+```json
 {
   "dateTime": "2020-11-02 02:50:12",
   "description": "Minha conta 1 updated",
@@ -25,3 +26,4 @@ http://localhost:8080/swagger-ui/
   "tags": "abc,def,ghi",
   "value": 101.99
 }
+```

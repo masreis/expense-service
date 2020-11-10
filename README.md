@@ -1,4 +1,28 @@
-#
+# Expenses
+
+Esta é uma aplicação para controle de gastos.
+
+## Ports
+
+|Application|Port|
+|---|---|
+|Expense Service API|8080|
+|Expense Service Client API|8081|
+|Spring Cloud Config Server|8888|
+|Front End (Angular) |4200 ou 80|
+
+## Expense JSON sample
+
+```json
+{
+  "dateTime": "2020-11-02 02:50:12",
+  "description": "Minha conta 1 updated",
+  "personName": "Jose",
+  "id": 1,
+  "tags": "abc,def,ghi",
+  "value": 101.99
+}
+```
 
 ## Build
 
