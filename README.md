@@ -1,6 +1,6 @@
 # Expenses
 
-Esta é uma aplicação para controle de gastos.
+Esta é uma aplicação para controle de gastos. Para rodar a aplicação é necessário ter um MySQL instalado.
 
 ## Ports
 
@@ -9,7 +9,7 @@ Esta é uma aplicação para controle de gastos.
 |Expense Service API|8080|
 |Expense Service Client API|8081|
 |Spring Cloud Config Server|8888|
-|Front End (Angular) |4200 ou 80|
+|Front End (Angular) |4200 (ng serve) ou 80 (Docker)|
 
 ## Expense JSON sample
 
