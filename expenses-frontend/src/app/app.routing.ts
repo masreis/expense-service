@@ -4,7 +4,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
-  { path: '', component: ExpenseCreateComponent },
+  { path: '', component: ExpenseListComponent },
   { path: 'expense-create', component: ExpenseCreateComponent },
   { path: 'expense-list', component: ExpenseListComponent },
   { path: 'expense-edit/:id', component: ExpenseCreateComponent }

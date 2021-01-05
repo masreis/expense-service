@@ -15,23 +15,26 @@ import org.springframework.web.bind.annotation.RequestBody;
 import io.swagger.annotations.ApiOperation;
 import net.expenseclient.model.dto.ExpenseDTO;
 
-@FeignClient(name = "${expense.service.name}", path = "${expense.service.path}", url = "${expense.service.url}")
+@FeignClient(
+    name = "${expense.service.name}",
+    path = "${expense.service.path}",
+    url = "${expense.service.url}")
 public interface ExpenseClientApi {
 
-    @PostMapping
-    @ApiOperation(value = "Route to create an expense")
-    public ResponseEntity<ExpenseDTO> create(@RequestBody ExpenseDTO dto);
+  @PostMapping
+  @ApiOperation(value = "Route to create an expense")
+  public ResponseEntity<ExpenseDTO> create(@RequestBody ExpenseDTO dto);
 
-    @GetMapping
-    @ApiOperation(value = "Route to find all expenses")
-    public ResponseEntity<List<ExpenseDTO>> findAll();
+  @GetMapping
+  @ApiOperation(value = "Route to find all expenses")
+  public ResponseEntity<List<ExpenseDTO>> findAll();
 
-    @PutMapping("/{id}")
-    @ApiOperation(value = "Route to update an expense")
-    public ResponseEntity<ExpenseDTO> update(@PathVariable final Long id, @Valid @RequestBody ExpenseDTO dto);
+  @PutMapping("/{id}")
+  @ApiOperation(value = "Route to update an expense")
+  public ResponseEntity<ExpenseDTO> update(
+      @PathVariable final Long id, @Valid @RequestBody ExpenseDTO dto);
 
-    @GetMapping("/{id}")
-    @ApiOperation(value = "Route to find expense by id")
-    public ResponseEntity<ExpenseDTO> findById(@PathVariable final Long id);
-
+  @GetMapping("/{id}")
+  @ApiOperation(value = "Route to find expense by id")
+  public ResponseEntity<ExpenseDTO> findById(@PathVariable final Long id);
 }

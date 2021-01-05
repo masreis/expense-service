@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Expense } from './expense.model';
-import { API_URL_EXPENSES } from "../app.constraints";
+import { API_URL_EXPENSES } from "../app.constants";
 
 @Injectable({ providedIn: 'root' })
 export class ExpenseService {
@@ -20,6 +20,10 @@ export class ExpenseService {
 
   create(expense: Expense) {
     return this.http.post<Expense>(API_URL_EXPENSES, expense);
+  }
+
+  update(id: number, expense: Expense){
+    return this.http.put<Expense>(API_URL_EXPENSES + "/" + id, expense);
   }
 }
 

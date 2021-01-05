@@ -10,11 +10,10 @@ import net.expense.response.Response;
 @ControllerAdvice
 public class ExpenseJavaApiExceptionHandler<T> {
 
-    @ExceptionHandler(value = { ExpenseNotFoundException.class })
-    protected ResponseEntity<Response<T>> handleNotFoundException(Exception exception) {
-        Response<T> response = new Response<>();
-        response.addError(exception.getLocalizedMessage());
-        return ResponseEntity.status(HttpStatus.NOT_FOUND).body(response);
-    }
-
+  @ExceptionHandler(value = {ExpenseNotFoundException.class})
+  protected ResponseEntity<Response<T>> handleNotFoundException(Exception exception) {
+    Response<T> response = new Response<>();
+    response.addError(exception.getLocalizedMessage());
+    return ResponseEntity.status(HttpStatus.NOT_FOUND).body(response);
+  }
 }

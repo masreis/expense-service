@@ -1,18 +1,20 @@
 package net.expense.service;
 
 import java.util.List;
-import java.util.Optional;
 
-import net.expense.model.Expense;
+import javax.validation.Valid;
+
+import net.expense.model.dto.ExpenseDTO;
 
 public interface ExpenseService {
 
-    Expense save(Expense expense);
+  ExpenseDTO save(ExpenseDTO expenseDto);
 
-    List<Expense> findAll();
+  List<ExpenseDTO> findAll();
 
-    boolean existsById(Long id);
+  boolean existsById(Long id);
 
-    Optional<Expense> findById(Long id);
+  ExpenseDTO findById(Long id);
 
+  ExpenseDTO update(@Valid ExpenseDTO dto);
 }

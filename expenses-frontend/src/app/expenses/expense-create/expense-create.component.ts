@@ -27,10 +27,8 @@ export class ExpenseCreateComponent implements OnInit {
       this.expenseService.findById(this.id).subscribe(
         (response) => {
           this.expense = response;
-          console.log(this.expense);
         }, error => {
           this.message = "Id [" + this.id + "] not found";
-          console.log(this.expense);
         }
       );
     }
@@ -40,11 +38,13 @@ export class ExpenseCreateComponent implements OnInit {
     if (form.invalid) {
       return;
     }
+    const operation = this.id > 0 ?
+      this.expenseService.update(this.id, this.expense) :
+      this.expenseService.create(this.expense);
 
-    this.expenseService.create(this.expense).subscribe((response) => {
-      console.log(response);
+    operation.subscribe((response) => {
       this.message = 'Expense id [' + response.id + '] saved';
-      form.resetForm();
+      if (isNaN(this.id)) form.resetForm();
     }, (error) => {
       console.log(error);
       this.message = JSON.stringify(error.error);

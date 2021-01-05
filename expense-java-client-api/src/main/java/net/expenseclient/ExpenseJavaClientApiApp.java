@@ -8,8 +8,7 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 @EnableFeignClients
 public class ExpenseJavaClientApiApp {
 
-    public static void main(String[] args) {
-        SpringApplication.run(ExpenseJavaClientApiApp.class, args);
-    }
-    
+  public static void main(String[] args) {
+    SpringApplication.run(ExpenseJavaClientApiApp.class, args);
+  }
 }
